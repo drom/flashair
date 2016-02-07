@@ -1,0 +1,26 @@
+{
+  "name": "flashair",
+  "version": "0.0.1",
+  "description": "flashair file downloader",
+  "main": "lib/",
+  "scripts": {
+    "test": "eslint lib/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/flashair.git"
+  },
+  "keywords": [
+    "flashair"
+  ],
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/flashair/issues"
+  },
+  "homepage": "https://github.com/drom/flashair#readme",
+  "dependencies": {
+    "request": "^2.69.0",
+    "yargs": "^3.32.0"
+  }
+}
