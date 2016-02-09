@@ -1,12 +1,17 @@
 # flashair
 
+Tools to work with FlashAir WiFi - SD - Flash card.
+
 [config](https://flashair-developers.com/en/documents/api/config/)
 
-Run flashair in station mode.
+## usage
 
+To download all files from FlashAir card to local folder.
+
+```sh
+bin\flashair.js --url http://192.168.xxx.xxx --dir .
 ```
-APPMODE=5
-APPNAME=flashair
-APPNETWORKKEY=********
-APPSSID=apSSID
-```
+
+## LICENSE
+
+[LICENSE](LICENSE)
