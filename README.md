@@ -9,7 +9,7 @@ Tools to work with FlashAir WiFi - SD - Flash card.
 To download all files from FlashAir card to local folder.
 
 ```sh
-bin\flashair.js --url http://192.168.xxx.xxx --dir .
+bin/flashair.js --url http://192.168.xxx.xxx --dir ./DCIM
 ```
 
 ## LICENSE
