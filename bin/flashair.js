@@ -11,16 +11,11 @@ var path;
 if (argv.url) {
     lib.filelist(
         argv.url,
-        {
-            dir: '',
-            name: 'DCIM',
-            size: 0,
-            attribute: 16,
-            data: 0,
-            time: 0
-        },
-        function (filelist) {
-            console.log(filelist)
+        { dir: '', name: 'DCIM', attribute: 16 },
+        function (err, filelist) {
+            // console.log(filelist.length);
+            // console.log(JSON.stringify(filelist, null, 4));
+            console.log(lib.filecount(filelist));
         }
     );
 } else {
