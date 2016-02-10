@@ -8,14 +8,20 @@ var yargs = require('yargs'),
 var argv = yargs.argv;
 var path;
 
-if (argv.url) {
+if (typeof argv.url === 'string') {
     lib.filelist(
         argv.url,
         { dir: '', name: 'DCIM', attribute: 16 },
         function (err, filelist) {
-            // console.log(filelist.length);
+            var flatlist = lib.flatlist(filelist);
+            // console.log(flatlist);
+            console.log(lib.filecount(flatlist));
+            if (typeof argv.dir === 'string') {
+                lib.download(argv.url, argv.dir, flatlist, function (err) {
+                    // console.log('downloaded done');
+                });
+            }
             // console.log(JSON.stringify(filelist, null, 4));
-            console.log(lib.filecount(filelist));
         }
     );
 } else {
