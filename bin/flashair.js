@@ -2,11 +2,9 @@
 'use strict';
 
 var yargs = require('yargs'),
-    request = require('request'),
     lib = require('../lib');
 
 var argv = yargs.argv;
-var path;
 
 if (typeof argv.url === 'string') {
     lib.filelist(
