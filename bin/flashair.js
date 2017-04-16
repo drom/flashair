@@ -7,9 +7,10 @@ var yargs = require('yargs'),
 var argv = yargs.argv;
 
 if (typeof argv.url === 'string') {
+    var from = argv.from || 'DCIM';
     lib.filelist(
         argv.url,
-        { dir: '', name: 'DCIM', attribute: 16 },
+        { dir: '', name: from, attribute: 16 },
         function (err, filelist) {
             var flatlist = lib.flatlist(filelist);
             // console.log(flatlist);
